@@ -1,6 +1,7 @@
 var Aop = {};
 
 Aop.around = function(pointcut, advice, namespaces) {
+	var isArounded = false;
 	if(namespaces === undefined || namespaces.length === 0) {
 		namespaces = [(function() {return this;}).call()];
 	}
@@ -18,9 +19,11 @@ Aop.around = function(pointcut, advice, namespaces) {
 												 arguments: arguments});
 					};
 				})(ns[member], member, ns);
+				isArounded = true;
 			}
 		}
 	}
+	return isArounded;
 };
 
 Aop.next = function(f) {

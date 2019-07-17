@@ -1,11 +1,12 @@
 {
   "name": "aop",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "simple version of aop",
+  "main": "aop.js",
   "scripts": {
+    "start": "node aop.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "stenrine",
   "license": "MIT"
 }
